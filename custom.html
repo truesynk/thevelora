@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Custom Order — The Velora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-badge"><img src="./assets/logo.jpg" alt="Velora Logo">
+  <path d="M30 75 Q20 55 28 35 Q34 20 50 15" stroke="#B8935F" stroke-width="2.2" fill="none"/>
+  <ellipse cx="34" cy="30" rx="5" ry="9" fill="#B8935F" transform="rotate(-30 34 30)"/>
+  <ellipse cx="26" cy="45" rx="5" ry="9" fill="#B8935F" transform="rotate(-10 26 45)"/>
+  <ellipse cx="30" cy="60" rx="5" ry="9" fill="#B8935F" transform="rotate(20 30 60)"/>
+</svg></div>
+      <div class="brand-name">வே<span>lora</span></div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="custom.html" class="nav-link active">Custom Order</a>
+      <a href="workshop.html" class="nav-link">Workshops & Kits</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="faq.html" class="nav-link">FAQs</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4A382C" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+
+<div class="wrap" style="padding-top:60px;">
+  <div class="section-head">
+    <span class="eyebrow">Start your order</span>
+    <h2>Design your own piece</h2>
+    <p>Tell us what you're picturing — we'll turn it into something you can hold. This isn't a checkout, it's the start of a conversation.</p>
+  </div>
+  <div class="custom-wrap">
+    <div class="custom-info">
+      <h3>How it works</h3>
+      <ul>
+        <li><span class="step-num">1</span> Fill in your preferences below</li>
+        <li><span class="step-num">2</span> Hit "Send My Request" — it opens WhatsApp with your details ready to send</li>
+        <li><span class="step-num">3</span> We reply with ideas, timeline, and next steps directly in chat</li>
+        <li><span class="step-num">4</span> Once you're happy, we start crafting</li>
+      </ul>
+      <p style="margin-top:28px; font-size:0.85rem; color:var(--ink-soft);">Prefer Instagram? You're welcome to DM us your idea there instead — <a href="https://instagram.com/thevelora" target="_blank" rel="noopener" style="color:var(--gold); font-weight:600;">@thevelora</a>.</p>
+    </div>
+    <div class="form-card">
+      <form id="customForm">
+        <div class="form-row">
+          <div class="field">
+            <label for="cName">Your Name</label>
+            <input type="text" id="cName" placeholder="e.g. Ananya" required>
+          </div>
+          <div class="field">
+            <label for="cContact">Best way to reach you</label>
+            <select id="cContact">
+              <option>WhatsApp</option>
+              <option>Instagram DM</option>
+              <option>Email</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>What are you looking to make?</label>
+          <div class="chip-select" id="productType">
+            <input type="radio" name="ptype" id="pt1" value="Jewellery / Accessories" checked><label for="pt1">Jewellery &amp; Accessories</label>
+            <input type="radio" name="ptype" id="pt2" value="Keychains & Charms"><label for="pt2">Keychains &amp; Charms</label>
+            <input type="radio" name="ptype" id="pt3" value="Resin Art"><label for="pt3">Resin Art</label>
+            <input type="radio" name="ptype" id="pt4" value="Personalised Gift"><label for="pt4">Personalised Gift</label>
+            <input type="radio" name="ptype" id="pt5" value="Something else"><label for="pt5">Something else</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="cColor">Colour / theme preference</label>
+            <input type="text" id="cColor" placeholder="e.g. pastel peach, minimal gold">
+          </div>
+          <div class="field">
+            <label for="cQty">Quantity</label>
+            <input type="text" id="cQty" placeholder="e.g. 1 piece, or set of 3">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cOccasion">Occasion (optional)</label>
+          <input type="text" id="cOccasion" placeholder="e.g. birthday gift, personal use, farewell">
+        </div>
+
+        <div class="field">
+          <label for="cBudget">Comfortable budget range</label>
+          <input type="text" id="cBudget" placeholder="e.g. ₹300–500 — we'll work with what suits you">
+        </div>
+
+        <div class="field">
+          <label for="cNotes">Describe your idea</label>
+          <textarea id="cNotes" placeholder="Tell us the details, inspiration, or reference you have in mind..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp btn-block">Send My Request via WhatsApp</button>
+        <p class="form-note">This opens WhatsApp with your answers pre-filled — you just hit send.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-badge"><img src="./assets/logo.jpg" alt="Velora Logo">
+  <path d="M30 75 Q20 55 28 35 Q34 20 50 15" stroke="#B8935F" stroke-width="2.2" fill="none"/>
+  <ellipse cx="34" cy="30" rx="5" ry="9" fill="#B8935F" transform="rotate(-30 34 30)"/>
+  <ellipse cx="26" cy="45" rx="5" ry="9" fill="#B8935F" transform="rotate(-10 26 45)"/>
+  <ellipse cx="30" cy="60" rx="5" ry="9" fill="#B8935F" transform="rotate(20 30 60)"/>
+</svg></div>
+          <div class="brand-name" style="color:var(--white);">வே<span>lora</span></div>
+        </div>
+        <p class="desc">Affordable, fully-customisable handmade pieces — designed with you, made for you. Est. 8 December 2025.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="custom.html">Custom Order</a></li>
+          <li><a href="workshop.html">Workshops &amp; Kits</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Say hello</h5>
+        <ul>
+          <li><a href="mailto:hello@thevelora.com">hello@thevelora.com</a></li>
+          <li><a href="https://www.instagram.com/thevelora11.11/" target="_blank" rel="noopener">@thevelora</a></li>
+          <li><a href="tel:+910000000000">+91 9941555151</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 The Velora. All pieces made with care.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+document.getElementById('customForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const name = document.getElementById('cName').value || 'there';
+  const contact = document.getElementById('cContact').value;
+  const ptype = document.querySelector('input[name="ptype"]:checked').value;
+  const color = document.getElementById('cColor').value || 'Not specified';
+  const qty = document.getElementById('cQty').value || 'Not specified';
+  const occasion = document.getElementById('cOccasion').value || 'Not specified';
+  const budget = document.getElementById('cBudget').value || 'Not specified';
+  const notes = document.getElementById('cNotes').value || 'Not specified';
+
+  const message = `Hi Velora! I'd like to place a custom order.\n\n`+
+    `Name: ${name}\n`+
+    `Preferred contact: ${contact}\n`+
+    `Product type: ${ptype}\n`+
+    `Colour/theme: ${color}\n`+
+    `Quantity: ${qty}\n`+
+    `Occasion: ${occasion}\n`+
+    `Budget range: ${budget}\n`+
+    `Details: ${notes}`;
+
+  const waLink = `https://wa.me/910000000000?text=${encodeURIComponent(message)}`;
+  window.open(waLink, '_blank');
+});
+</script>
+</body>
+</html>

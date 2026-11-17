@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQs — The Velora</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600;700&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<header class="site-header">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-badge">
+        <img src="./assets/logo.jpg" alt="Velora Logo">
+      </div>
+      <div class="brand-name">வே<span>lora</span></div>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="gallery.html" class="nav-link">Gallery</a>
+      <a href="custom.html" class="nav-link">Custom Order</a>
+      <a href="workshop.html" class="nav-link">Workshops & Kits</a>
+      <a href="reviews.html" class="nav-link">Reviews</a>
+      <a href="faq.html" class="nav-link active">FAQs</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#4A382C" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</header>
+<main>
+
+<div class="wrap" style="padding-top:60px;">
+  <div class="section-head">
+    <span class="eyebrow">Good to know</span>
+    <h2>Frequently asked questions</h2>
+  </div>
+  <div class="faq-list" id="faqList"></div>
+</div>
+
+</main>
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <div class="brand-badge">
+            <img src="./assets/logo.jpg" alt="Velora Logo">
+          </div>
+          <div class="brand-name" style="color:var(--white);">வே<span>lora</span></div>
+        </div>
+        <p class="desc">Affordable, fully-customisable handmade pieces — designed with you, made for you. Est. 8 December 2025.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="custom.html">Custom Order</a></li>
+          <li><a href="workshop.html">Workshops &amp; Kits</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Say hello</h5>
+        <ul>
+          <li><a href="mailto:hello@thevelora.com">hello@thevelora.com</a></li>
+          <li><a href="https://www.instagram.com/thevelora11.11/" target="_blank" rel="noopener">@thevelora</a></li>
+          <li><a href="tel:+910000000000">+91 9941555151</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 The Velora. All pieces made with care.</div>
+  </div>
+</footer>
+<script src="script.js"></script>
+<script>
+const faqs = [
+  {q:"How long does a custom order take?", a:"Most pieces are ready within 3–7 days depending on complexity and current orders. We'll always confirm a timeline with you over chat before starting."},
+  {q:"How does the customisation process work?", a:"You send us your idea — colours, style, occasion — through the Custom Order form or a direct message. We discuss details, confirm the design, and then start crafting."},
+  {q:"Do you show pricing on the website?", a:"We don't list fixed prices since every piece is custom. Share your comfortable budget with us and we'll design around it — pricing is always discussed directly over DM."},
+  {q:"How do I pay?", a:"Payment details are shared directly during your chat with us on WhatsApp or Instagram, once your order is confirmed."},
+  {q:"Do you deliver, and where?", a:"Yes — delivery details, timelines, and charges (if any) depend on your location and are confirmed with you directly in chat."},
+  {q:"How do I book a workshop or order a DIY kit?", a:"Head to the Workshops & Kits page and message us to check current availability, dates, and what's included."},
+  {q:"What if I'm not happy with how it turns out?", a:"Because we confirm the design with you before making it, surprises are rare — but if something's off, message us and we'll make it right."},
+];
+document.getElementById('faqList').innerHTML = faqs.map((f,i)=>`
+  <div class="faq-item">
+    <button class="faq-q"><span>${f.q}</span><span class="icon">+</span></button>
+    <div class="faq-a"><p>${f.a}</p></div>
+  </div>`).join('');
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q = item.querySelector('.faq-q');
+  const a = item.querySelector('.faq-a');
+  q.addEventListener('click', ()=>{
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(other=>{
+      other.classList.remove('open');
+      other.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+</script>
+</body>
+</html>
